@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>理想汽车话术手册（完整版）</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#f0f2f5;color:#1a1a1a;line-height:1.75}
+.header{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 60%,#0f3460 100%);color:#fff;padding:36px 32px 28px;box-shadow:0 2px 16px rgba(0,0,0,.3)}
+.header h1{font-size:22px;font-weight:700;letter-spacing:.5px}
+.header .meta{margin-top:8px;font-size:13px;color:rgba(255,255,255,.6)}
+.header .meta span{margin-right:20px}
+.nav{background:#fff;border-bottom:1px solid #e8eaed;padding:0 28px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;position:sticky;top:0;z-index:100;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-block;padding:12px 12px;font-size:13px;color:#555;text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s}
+.nav a:hover,.nav a.active{color:#e53e3e;border-bottom-color:#e53e3e}
+.container{max-width:920px;margin:24px auto;padding:0 16px 60px}
+
+.card{background:#fff;border-radius:12px;margin-bottom:20px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,.07)}
+.card-header{padding:16px 22px;display:flex;align-items:center;gap:10px;color:#fff;font-size:15px;font-weight:700}
+.card-header .num{background:rgba(255,255,255,.2);border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
+.h-blue{background:linear-gradient(90deg,#1a1a2e,#0f3460)}
+.h-teal{background:linear-gradient(90deg,#0f4c75,#1b6ca8)}
+.h-green{background:linear-gradient(90deg,#1b5e20,#388e3c)}
+.h-orange{background:linear-gradient(90deg,#bf360c,#e64a19)}
+.h-purple{background:linear-gradient(90deg,#4a148c,#7b1fa2)}
+.h-dark{background:linear-gradient(90deg,#212121,#424242)}
+.card-body{padding:18px 22px}
+
+.sub{margin-bottom:26px}
+.sub:last-child{margin-bottom:0}
+.sub-title{font-size:13px;font-weight:700;color:#0f3460;padding:5px 12px;background:#eef2ff;border-left:3px solid #0f3460;border-radius:0 6px 6px 0;margin-bottom:12px}
+
+blockquote{background:#f8f9ff;border-left:4px solid #4a6cf7;border-radius:0 8px 8px 0;padding:11px 16px 11px 32px;margin:8px 0;font-size:13.5px;color:#2d3748;position:relative}
+blockquote::before{content:'"';font-size:32px;color:#c3cff7;position:absolute;top:-2px;left:8px;font-family:serif;line-height:1}
+
+.qa{border:1px solid #e8eaed;border-radius:10px;margin:10px 0;overflow:hidden}
+.qa-q{background:#fff5f5;padding:9px 16px;font-size:13px;font-weight:700;color:#c53030;border-bottom:1px solid #fed7d7;display:flex;align-items:center;gap:8px}
+.qa-q::before{content:"Q";background:#c53030;color:#fff;padding:1px 7px;border-radius:4px;font-size:11px;flex-shrink:0}
+.qa-a{padding:12px 16px;font-size:13px}
+
+.step{display:flex;gap:10px;margin:8px 0;align-items:flex-start}
+.step-n{background:#0f3460;color:#fff;border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;margin-top:2px}
+.step-lbl{font-size:12px;color:#666;font-weight:600;margin-bottom:3px}
+
+table{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0}
+th{background:#0f3460;color:#fff;padding:9px 12px;text-align:left;font-weight:600}
+td{padding:9px 12px;border-bottom:1px solid #edf2f7;vertical-align:top}
+tr:nth-child(even) td{background:#f8fafc}
+tr:hover td{background:#eef2ff}
+
+.tag{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;margin:2px 3px 4px 0}
+.t-strat{background:#fff3cd;color:#856404}
+.t-tip{background:#d4edda;color:#155724}
+.t-warn{background:#f8d7da;color:#721c24}
+
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0}
+.axe{background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:13px;text-align:center}
+.axe .icon{font-size:22px;margin-bottom:5px}
+.axe .t{font-size:13px;font-weight:700;color:#0f3460;margin-bottom:3px}
+.axe .d{font-size:12px;color:#666}
+
+.pocket{background:linear-gradient(135deg,#1a1a2e,#0f3460);border-radius:12px;padding:18px 20px;color:#fff;margin-bottom:14px}
+.pocket h3{font-size:12px;color:rgba(255,255,255,.55);margin-bottom:10px;text-transform:uppercase;letter-spacing:1px}
+.pocket .kl{background:rgba(255,255,255,.1);border-left:3px solid #e53e3e;padding:7px 13px;margin:5px 0;border-radius:0 6px 6px 0;font-size:13.5px}
+
+.color-table td:first-child{font-weight:600;color:#0f3460}
+
+.warn-box{background:#fffbeb;border:1px solid #f6ad55;border-radius:10px;padding:15px 18px}
+.warn-box h3{color:#c05621;font-size:14px;margin-bottom:10px}
+.warn-box li{font-size:13px;color:#744210;margin:5px 0 5px 16px}
+.forbidden{color:#c53030;font-weight:700}
+
+strong{color:#0f3460}
+ul{padding-left:20px}
+ul li{font-size:13px;color:#444;margin:4px 0}
+ol{padding-left:20px}
+ol li{font-size:13px;color:#444;margin:4px 0}
+p{font-size:13.5px;color:#333;margin:5px 0}
+
+@media(max-width:600px){
+  .header{padding:22px 14px}.header h1{font-size:17px}
+  .container{padding:0 10px 40px}
+  .card-body{padding:14px}
+  .three{grid-template-columns:1fr}
+  .nav a{padding:10px 9px;font-size:12px}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>理想汽车现车转化 + 转大配 + 选装改配话术手册</h1>
+  <div class="meta">
+    <span>适用角色：交付顾问 / 产品专家 / 交付专家</span>
+    <span>场景：质损车 / 现车转提 / 升级大配 / 踏板轮毂颜色选装</span>
+  </div>
+</div>
+
+<div class="nav">
+  <a href="#s1">核心逻辑</a>
+  <a href="#s2">质损车</a>
+  <a href="#s3">现车转化</a>
+  <a href="#s4">转大配</a>
+  <a href="#s5">电动踏板</a>
+  <a href="#s6">大轮毂</a>
+  <a href="#s7">特殊颜色</a>
+  <a href="#s8">速查卡</a>
+  <a href="#s9">注意事项</a>
+</div>
+
+<div class="container">
+
+<!-- 一 -->
+<div class="card" id="s1">
+  <div class="card-header h-blue"><span class="num">一</span>核心业务逻辑</div>
+  <div class="card-body">
+    <blockquote><p>核心不是"卖车"，而是"帮客户做更划算的决定"</p></blockquote>
+    <div class="sub" style="margin-top:14px">
+      <div class="sub-title">四类转化目标</div>
+      <table>
+        <tr><th>场景</th><th>目标</th><th>核心逻辑</th></tr>
+        <tr><td>质损车转化</td><td>让客户接受有轻微瑕疵的库存车</td><td>弱化差异感知 + 政策补偿 + 引导到店</td></tr>
+        <tr><td>现车转化</td><td>让等单客户转提现有库存车</td><td>加速交付 + 即时权益 + 稀缺感</td></tr>
+        <tr><td>小配转大配</td><td>升级配置提高保值和满意度</td><td>等待成本 + 持有成本 + 机会成本</td></tr>
+        <tr><td>选装改配</td><td>引导加装踏板/轮毂/特殊颜色</td><td>场景体验 + 原厂价值 + 选装基金</td></tr>
+      </table>
+    </div>
+    <div class="sub">
+      <div class="sub-title">转化三板斧（通用）</div>
+      <div class="three">
+        <div class="axe"><div class="icon">🤝</div><div class="t">认同情绪</div><div class="d">先认同客户感受，不正面对抗</div></div>
+        <div class="axe"><div class="icon">💡</div><div class="t">重构价值</div><div class="d">用具体数字/利益重新定义"划算"</div></div>
+        <div class="axe"><div class="icon">⏰</div><div class="t">制造截止</div><div class="d">给明确时间节点，避免无限搁置</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 二 质损车 -->
+<div class="card" id="s2">
+  <div class="card-header h-teal"><span class="num">二</span>质损车转化话术</div>
+  <div class="card-body">
+    <div class="sub">
+      <div class="sub-title">2.1 长车龄 / 生产日期较早</div>
+      <span class="tag t-strat">策略：弱化车龄 + 特殊政策 + 稀缺感</span>
+      <blockquote><p>XXX您好，我们这边刚好有一台和您配置完全一样的车，第一时间联系您。我距离目标还差一台，如果您在XX日前提走这台，可以为您特殊申请XX元关怀。因为是特殊车型，需要您帮忙保留一下，您看是否可以考虑转提这台？</p></blockquote>
+      <ul><li>这台是今年X月生产，属于近期新车，我帮您查一下具体日期。</li><li>库存新车和在途订单的车是同一套工厂标准，品质完全一致。</li></ul>
+      <div class="qa" style="margin-top:10px"><div class="qa-q">客户追问"为什么有库存"</div><div class="qa-a"><blockquote><p>这台是客户临时变更配置留下来的，各方面都很完好，反而配置上更适合您。</p></blockquote></div></div>
+    </div>
+    <div class="sub">
+      <div class="sub-title">2.2 天窗出厂更换</div>
+      <span class="tag t-strat">策略：原厂行为不影响残值 + 关怀政策 + 稀缺优先感</span>
+      <div class="step" style="margin-top:10px"><div class="step-n">1</div><div><div class="step-lbl">介绍车辆</div><blockquote><p>门店马上到一台和您配置完全相同的车，随车赠送XX积分/5000油卡关怀政策，非常合适。</p></blockquote></div></div>
+      <div class="step"><div class="step-n">2</div><div><div class="step-lbl">说明天窗</div><blockquote><p>这台车在出厂检测时，厂家统一更换了原厂天窗，所以公司给予了额外关怀政策作为补偿。</p></blockquote></div></div>
+      <div class="step"><div class="step-n">3</div><div><div class="step-lbl">消除顾虑</div><blockquote><p>因为是原厂更换，<strong>不会留下任何车辆维修记录，完全不影响二手车残值</strong>。对您来说这台车的品质和标准跟全新车是一样的。</p></blockquote></div></div>
+      <div class="step"><div class="step-n">4</div><div><div class="step-lbl">制造稀缺</div><blockquote><p>5000油卡真的很划算，我把这台优先给您留下来了，先问您愿不愿意，您不要我再给其他有意向的客户。</p></blockquote></div></div>
+    </div>
+    <div class="sub">
+      <div class="sub-title">2.3 漆面轻微修复</div>
+      <blockquote><p>这台车在XX位置有一点轻微的漆面瑕疵，门店已经做了喷漆修复处理，<strong>恢复的是原厂漆面标准，不存在色差</strong>，您有时间可以来交付中心亲眼看一下，现在这台车正在找主人。</p></blockquote>
+      <blockquote><p>提走后您享受的所有车主权益完全不受影响，额外还有XX积分/油卡关怀政策。您看是否考虑，或者我陪您来店里实际看看车？</p></blockquote>
+    </div>
+    <div class="sub">
+      <div class="sub-title">2.4 客户说："质损车我不要，心里膈应。"</div>
+      <blockquote><p>您这个感受我完全理解，换我我第一反应也一样。我跟您说说实际情况——这台车的处理是出厂前就完成的，厂家有一套专门的质检和修复标准，修复完才允许出库，到您手里已经是合格品了。</p></blockquote>
+      <blockquote><p>您最担心的是什么？是后续保养、二手残值，还是外观？您说，我一条一条给您解释。</p></blockquote>
+    </div>
+  </div>
+</div>
+
+<!-- 三 现车转化 -->
+<div class="card" id="s3">
+  <div class="card-header h-teal"><span class="num">三</span>现车转化话术（引导等单客户转提）</div>
+  <div class="card-body">
+    <div class="qa"><div class="qa-q">客户说："我就要我订的那台，不换。"</div><div class="qa-a"><span class="tag t-tip">不正面对抗，先认同再引导</span><blockquote style="margin-top:8px"><p>您的想法完全可以理解，当初选这台配置一定有您的考量。我联系您也不是非要换，只是这边刚好有一台条件特别合适，想第一时间告诉您，您要是不合适就当我多说一嘴，没关系的。</p></blockquote><blockquote><p>您在途的订单我帮您继续跟进着，同时您就当多了解一个选项，您看方不方便我把这台的具体信息发给您参考一下？</p></blockquote></div></div>
+    <div class="qa"><div class="qa-q">客户说："转提有什么好处？凭什么让我等变不等？"</div><div class="qa-a"><span class="tag t-tip">直接说利益，不绕弯</span><blockquote style="margin-top:8px"><p>好处有两个：第一，今天能定今天就能提，最快X天内交车；第二，公司为您额外补贴XX元/油卡/积分作为感谢。这两点是在途订单享受不到的。</p></blockquote></div></div>
+    <div class="qa"><div class="qa-q">客户说："我已经跟家里说好等那台了。"</div><div class="qa-a"><span class="tag t-tip">尊重决策，降低门槛</span><blockquote style="margin-top:8px"><p>没关系，您不需要马上决定。我把这台的信息、图片和政策发给您，您跟家里人商量一下，觉得合适再告诉我。这台我帮您暂时留一留，但时间不会太长，您看今晚能给我个回复吗？</p></blockquote></div></div>
+  </div>
+</div>
+
+<!-- 四 转大配 -->
+<div class="card" id="s4">
+  <div class="card-header h-blue"><span class="num">四</span>引导小配转大配话术</div>
+  <div class="card-body">
+    <div class="sub">
+      <div class="sub-title">4.1 开场话术</div>
+      <p style="font-size:13px;font-weight:600;color:#444;margin-bottom:6px">客户刚下单小配：</p>
+      <blockquote><p>恭喜您下单！我帮您梳理了一下订单情况，顺带想跟您聊个小建议——您选的这个配置属于小众配置，从我们数据来看，等车周期和后续保值方面都有些需要提前了解的信息，您方便我跟您说一下吗？</p></blockquote>
+      <p style="font-size:13px;font-weight:600;color:#444;margin:10px 0 6px">客户已等待一段时间：</p>
+      <blockquote><p>XXX您好，帮您跟进了一下订单，您的车目前还在排产中，预计还需要XX天。我想趁这个时间跟您聊一个方案，看看能不能帮您更快提到车，您方便吗？</p></blockquote>
+    </div>
+    <div class="sub">
+      <div class="sub-title">4.2 核心算账逻辑</div>
+      <blockquote><p>我帮您算笔账——大配和小配价差大概是XX元。但小配二手折价比大配多一万左右，加上多等半个月，在途资金也是有成本的。两边一抵，差距没那么大了，而且大配开着更舒心，功能也更全。</p></blockquote>
+    </div>
+    <div class="sub">
+      <div class="sub-title">4.3 各类顾虑应对</div>
+      <div class="qa"><div class="qa-q">价格差太多，超预算了。</div><div class="qa-a"><blockquote><p>我们来看实际差多少——大配比您现在的车贵XX元，选金融方案分摊到每个月就是XXX元，相当于每天多XX元。这点差价换来更快提车、更高保值，您觉得值不值？另外现在还有补贴，可以直接抵掉一部分差价，实际您多付的没那么多。</p></blockquote></div></div>
+      <div class="qa"><div class="qa-q">大配那些功能我用不上。</div><div class="qa-a"><blockquote><p>用没用是一回事，保值是另一回事。二手市场上买家看的是配置单，不管您用没用过，大配的配置清单放在那里就值钱。小配不管保养多好，配置低就是折价的硬伤。而且很多功能是用了才知道好，很多客户当初也说用不上，现在天天用。</p></blockquote></div></div>
+      <div class="qa"><div class="qa-q">我就喜欢那个颜色，大配没有。</div><div class="qa-a"><blockquote><p>颜色这个好解决——选大配之后，花三千左右做整车贴膜，颜色随便选，还能保护原厂漆，卖二手撕掉漆面是全新的，反而更保值。比等一台小配，值多了。</p></blockquote></div></div>
+      <div class="qa"><div class="qa-q">已经付定金了，改配麻烦。</div><div class="qa-a"><blockquote><p>改配这个交给我来处理，您不需要自己跑手续，我这边直接帮您操作。现在改比等车到了再后悔好处理得多。</p></blockquote></div></div>
+      <div class="qa"><div class="qa-q">家里人已经定好了，不好改。</div><div class="qa-a"><blockquote><p>您的顾虑我理解，这样，我把大配和小配的对比——价差、等车时间、二手残值——整理一份发您，您拿给家里人一起看一下，如果他们觉得可以咱们再推进，我保证大配资源先帮您留着。</p></blockquote></div></div>
+      <div class="qa"><div class="qa-q">等我那台就行，不用换。</div><div class="qa-a"><blockquote><p>当然可以等，我也帮您继续跟进。就是想提醒您几点：第一，小配排产周期不确定，可能比预期更长；第二，补贴有时效，等到了不一定还有；第三，我们现在有一台大配现车，今天定最快三天提走。您要是愿意多了解一下，我把信息发您，不愿意的话继续等原来那台，没关系。</p></blockquote></div></div>
+    </div>
+    <div class="sub">
+      <div class="sub-title">4.4 临门一脚</div>
+      <blockquote><p>您现在的顾虑主要是哪方面？价格、功能、还是家里人那边？您说，我帮您把这一块说清楚，剩下的您自己判断。</p></blockquote>
+      <blockquote><p>我们这边大配现车就剩这一台，我帮您优先留着，最多留到今晚/明天上午。您的小配订单我也帮您保留着，两个都在，考虑清楚告诉我选哪个就行。</p></blockquote>
+    </div>
+  </div>
+</div>
+
+<!-- 五 电动踏板 -->
+<div class="card" id="s5">
+  <div class="card-header h-green"><span class="num">五</span>选装改配 — 电动踏板</div>
+  <div class="card-body">
+    <div class="sub">
+      <div class="sub-title">目标用户 &amp; 原厂核心优势</div>
+      <div class="three">
+        <div class="axe"><div class="icon">👴</div><div class="t">家有老人/孩子</div><div class="d">上下车不方便，踏板最刚需</div></div>
+        <div class="axe"><div class="icon">🤰</div><div class="t">孕妇/女性</div><div class="d">跨大步上车不方便，安全省力</div></div>
+        <div class="axe"><div class="icon">🏕️</div><div class="t">露营自驾游</div><div class="d">车顶行李装卸，仪式感上车</div></div>
+      </div>
+      <p style="font-size:13px;font-weight:700;color:#1b5e20;margin:12px 0 6px">原厂踏板 vs 副厂核心差异：</p>
+      <ul>
+        <li><strong>只有原厂踏板才能用车机控制</strong>，副厂的用不了</li>
+        <li>无损安装，故障率极低，副厂需要打孔</li>
+        <li>交付后目前<strong>暂不支持后期加装</strong>（现在不选就没机会）</li>
+        <li>与整车质保一致，后期保障更省心</li>
+      </ul>
+    </div>
+    <div class="sub">
+      <div class="sub-title">踏板8大功能（话术素材）</div>
+      <table>
+        <tr><th>#</th><th>功能</th><th>一句话说明</th></tr>
+        <tr><td>01</td><td>靠近伸出</td><td>靠近解锁自动展开，配合隐藏门把手，上车仪式感满满</td></tr>
+        <tr><td>02</td><td>单侧开启</td><td>支持只开一侧，满足家人差异化需求</td></tr>
+        <tr><td>03</td><td>行李装卸</td><td>踩上踏板轻松装卸车顶行李箱，让车顶成为第二储藏室</td></tr>
+        <tr><td>04</td><td>随心关闭</td><td>特殊路况P挡车机关闭，避免剐蹭</td></tr>
+        <tr><td>05</td><td>智能防夹</td><td>遇到障碍物自动收回/伸出，智能保护安全</td></tr>
+        <tr><td>06</td><td>搭配空气悬架</td><td>特殊路况悬架调"高"，底盘升高40mm防剐踏板</td></tr>
+        <tr><td>07</td><td>静音电机</td><td>IP67防护，噪音＜50分贝，-40℃至85℃稳定工作</td></tr>
+        <tr><td>08</td><td>优质铝材</td><td>A380铝合金，单边承重最高300公斤，多重防腐处理</td></tr>
+      </table>
+    </div>
+    <div class="sub">
+      <div class="sub-title">开场引导话术</div>
+      <p style="font-size:13px;font-weight:600;color:#444;margin-bottom:6px">通用版：</p>
+      <blockquote><p>XX女士/先生，您之前有没有试过SUV上车的尺寸？老人小孩上车需要大幅跨步，孩子还会直接踩在车门上，时间久了门槛条磨损很厉害。我们原厂电动踏板可以解决这个问题，而且价格和在外面装差不多，只有原厂踏板才能用车机控制，交付后还暂时不支持后期加装，您看是否考虑？</p></blockquote>
+      <p style="font-size:13px;font-weight:600;color:#444;margin:10px 0 6px">孕妇/自驾游场景（成单案例）：</p>
+      <blockquote><p>您太太现在有身孕，SUV高度上下车对孕妇来说每次都是个挑战。电动踏板展开后上下车非常安全方便，加上你们经常自驾游，车顶行李箱踩上踏板装卸也方便多了。</p></blockquote>
+      <p style="font-size:13px;font-weight:600;color:#444;margin:10px 0 6px">试驾引导（关键动作）：</p>
+      <blockquote><p>我们试驾的时候，在一个停车场里临时停靠一下，您感受一下踏板展开和收回的实际效果，用了才知道差距。</p></blockquote>
+    </div>
+    <div class="sub">
+      <div class="sub-title">顾虑应对</div>
+      <div class="qa"><div class="qa-q">我们身高1.8米，用不上。</div><div class="qa-a"><blockquote><p>您平时只有你们两个用，但家人来了老人呢？孩子呢？而且踏板不只是上下车，还能踩着装车顶行李——露营装备那么重，有个踏板借力省事很多。再说，交付后就不支持后期加装了，现在不选就真没机会了。</p></blockquote></div></div>
+      <div class="qa"><div class="qa-q">外面也能装，便宜一点。</div><div class="qa-a"><blockquote><p>外面装的副厂踏板和原厂有本质区别——第一，原厂是无损安装，副厂要打孔；第二，只有原厂踏板能用车机控制，副厂的用不了；第三，原厂和整车质保一致，副厂出了问题得自己找。价格差不了多少，但品质和保障差很多。</p></blockquote></div></div>
+      <div class="qa"><div class="qa-q">不经常用，不划算。</div><div class="qa-a"><blockquote><p>踏板的核心不只是上下车，还有行李装卸、仪式感、安全性。而且您要是真的觉得不需要，可以在车机里关掉，不影响任何使用。用多用少都由您，但交付后不能补装，现在不选就真的没有了。</p></blockquote></div></div>
+      <div class="qa"><div class="qa-q">安装了会不会生锈/安全吗？</div><div class="qa-a"><blockquote><p>您放心，踏板采用A380铝合金材质，自带抗腐蚀处理，电机是IP67防护等级，防水防尘，零下40度到85度都能正常工作。而且有智能防夹功能，遇到障碍物自动收回，安全性非常高。</p></blockquote></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 六 大轮毂 -->
+<div class="card" id="s6">
+  <div class="card-header h-orange"><span class="num">六</span>选装改配 — 21寸大轮毂</div>
+  <div class="card-body">
+    <div class="sub">
+      <div class="sub-title">产品价值 &amp; 目标用户</div>
+      <div class="three">
+        <div class="axe"><div class="icon">😎</div><div class="t">更有面子</div><div class="d">气场更强，成功人士/生意人首选</div></div>
+        <div class="axe"><div class="icon">🏎️</div><div class="t">更好开</div><div class="d">轮胎更宽，操控/抓地力/稳定性更好</div></div>
+        <div class="axe"><div class="icon">🛡️</div><div class="t">更安全</div><div class="d">紧急转弯急加速时不易打滑</div></div>
+      </div>
+      <p style="font-size:13px;margin-top:10px">约 <strong>40%</strong> 的L7/L8用户会选择21寸轮毂；使用选装基金权益仅需 <strong>5000元</strong>（根据当期政策介绍）。</p>
+    </div>
+    <div class="sub">
+      <div class="sub-title">推荐话术</div>
+      <p style="font-size:13px;font-weight:600;color:#444;margin-bottom:6px">引导对比：</p>
+      <blockquote><p>XX女士/先生，您看这两辆车的轮毂，感官上有什么区别吗？是不是这台更显大气？就是因为轮毂更大！</p></blockquote>
+      <p style="font-size:13px;font-weight:600;color:#444;margin:10px 0 6px">旗舰同款：</p>
+      <blockquote><p>轮毂尺寸代表了车辆级别，越高级的车越会选大尺寸——比如奔驰S级比E级大，只有到了迈巴赫S680才能配备最顶级的"大饼"轮毂。很多品牌光升级轮胎就要上万，而在理想，您使用选装基金权益仅需5000元。如果您升级到21寸，就和旗舰级的L9是一样的。</p></blockquote>
+      <p style="font-size:13px;font-weight:600;color:#444;margin:10px 0 6px">气场足：</p>
+      <blockquote><p>您有没有发现轮毂变大，整个车的气场完全不一样了？明显更大气、更有力量感，特别适合您这种有气质的成功人士！</p></blockquote>
+    </div>
+    <div class="sub">
+      <div class="sub-title">顾虑应对</div>
+      <div class="qa"><div class="qa-q">后期售后成本更高，不合适。</div><div class="qa-a"><blockquote><p>整车轮胎一般6万公里左右才会涉及更换，从官方渠道购买20寸和21寸轮胎价格差异忽略不计，基本不会带来使用成本的提升。同时您还能获得更好看的外观感受和更好的操控性能，非常划算。</p></blockquote></div></div>
+      <div class="qa"><div class="qa-q">胎噪大，影响舒适度。</div><div class="qa-a"><blockquote><p>我们21寸的轮毂标配轮胎都采用了带静音海绵的轮胎，对于轮胎噪音都有非常好的隔绝感。您刚才试驾的车也是21寸轮毂，乘坐和驾驶感受都可以保证很好的品质感！另外在第三方测评中（郑博士巴顿），我们L系列整体静音效果在行业内遥遥领先。</p></blockquote></div></div>
+      <div class="qa"><div class="qa-q">担心影响续航和油耗。</div><div class="qa-a"><blockquote><p>咱们20寸和21寸轮毂对应轮胎是255/55/R20和265/45/R21，轮胎宽度对续航和油耗的影响可以忽略不计，因为整体宽度差异非常小。同时咱们是增程式电动车，本身没有里程焦虑，您可以放心选择。</p></blockquote></div></div>
+      <div class="qa"><div class="qa-q">后期自己换合算吗？</div><div class="qa-a"><blockquote><p>使用选装基金权益仅需5000元，非常划算。后期自己选装，您不仅要购买轮毂，还需要更换轮胎，价格远高于原厂选装。而且现在选是出厂标配状态，品质和匹配度都更有保障。</p></blockquote></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 七 特殊颜色 -->
+<div class="card" id="s7">
+  <div class="card-header h-purple"><span class="num">七</span>选装改配 — 特殊车漆 / 颜色</div>
+  <div class="card-body">
+    <div class="sub">
+      <div class="sub-title">各颜色核心价值点</div>
+      <table class="color-table">
+        <tr><th>颜色</th><th>特点</th><th>话术关键词</th></tr>
+        <tr><td>绿色珍珠漆</td><td>双颗粒珠光，阳光翠绿，阴天墨绿</td><td>宾利/奔驰同类颜色4万+，理想5000元</td></tr>
+        <tr><td>Deep Green 深绿</td><td>低调沉稳，商务感强</td><td>成熟、有品位、百搭</td></tr>
+        <tr><td>沙漠金/石英金</td><td>石英晶质感，阳光下金色光泽</td><td>行政感、商务感、稀缺限量</td></tr>
+        <tr><td>Baby Blue</td><td>年轻感，蓝色象征活力</td><td>个性、时尚、家庭用车也可以有态度</td></tr>
+        <tr><td>白色珍珠</td><td>多层珍珠粉工艺，阳光下流光溢彩</td><td>高级感、纯净、女性用户喜爱</td></tr>
+        <tr><td>Tech Blue</td><td>科技感，沉稳中带活力</td><td>理工男、科技爱好者</td></tr>
+        <tr><td>紫色特别版</td><td>全行业研发难度最大</td><td>劳斯莱斯库里南同款色系，30万左右车型才有</td></tr>
+        <tr><td>小象灰</td><td>唯一低饱和度车漆</td><td>L6年轻用户最爱，质感贴膜无法替代</td></tr>
+      </table>
+    </div>
+    <div class="sub">
+      <div class="sub-title">沟通四象限策略</div>
+      <table>
+        <tr><th>客户类型</th><th>策略</th><th>话术</th></tr>
+        <tr><td>已选好颜色，对颜色敏感</td><td><strong>尊重</strong></td><td>"您的眼光真好，这个颜色是理想的主打色，很多用户跟您一样都非常喜欢。"</td></tr>
+        <tr><td>不挑剔，有2款中意</td><td><strong>类比</strong></td><td>"XX颜色是理想的主打色，很多用户跟您一样都非常喜欢它……"</td></tr>
+        <tr><td>对颜色不敏感，没特殊要求</td><td><strong>推荐</strong></td><td>"咱们理想有很多经典颜色深受用户喜爱，我带您看看，说不定有您心动的颜色。"</td></tr>
+        <tr><td>注重外观，但对特殊颜色没概念</td><td><strong>引导</strong></td><td>"什么颜色会使您心情好？您倾向张扬一些还是低调一些？"</td></tr>
+      </table>
+    </div>
+    <div class="sub">
+      <div class="sub-title">推荐话术</div>
+      <p style="font-size:13px;font-weight:600;color:#444;margin-bottom:6px">绿色珍珠漆：</p>
+      <blockquote><p>以绿色珍珠漆为例，这款漆面在阳光下呈翠绿色，阴天是墨绿色，非常有层次感。类似颜色在宾利和奔驰的车型上选择要4万元以上，在理想您使用选装基金权益只需要5000元，非常超值！</p></blockquote>
+      <p style="font-size:13px;font-weight:600;color:#444;margin:10px 0 6px">紫色特别版：</p>
+      <blockquote><p>紫色是所有颜色中研发难度最大的——这就是为什么整个汽车行业很少有品牌敢用紫色。上一个用紫色的车型，是劳斯莱斯库里南，在30万左右车型里，选装基金只需要约5000元，就能凸显您车辆的独特性。同时，紫色也是当下流行色，更能凸显您的时尚与品味。</p></blockquote>
+      <p style="font-size:13px;font-weight:600;color:#444;margin:10px 0 6px">小象灰：</p>
+      <blockquote><p>小象灰是我们唯一一款低饱和度车漆，特别受L6年轻用户喜爱，能展现车主活力运动的个性！现在特别流行低饱和度车漆颜色，而且这个颜色的质感是贴膜无法达到的！</p></blockquote>
+    </div>
+    <div class="sub">
+      <div class="sub-title">顾虑应对</div>
+      <div class="qa"><div class="qa-q">价格太贵了，我可以从外面改色。</div><div class="qa-a"><blockquote><p>您的心情我理解。但从几个角度帮您分析：<strong>品质</strong>——像绿色珍珠漆，类似颜色在宾利和奔驰要4万元以上，我们只需5000元；<strong>品质保障</strong>——原厂漆的抗氧化性、漆膜厚度都比普通漆面更好，改色膜很难保证品质，后期如果留胶处理更麻烦；<strong>个性选择</strong>——原厂限量版车漆更能凸显您车辆的独特性，这是贴膜无法达到的。</p></blockquote></div></div>
+      <div class="qa"><div class="qa-q">特殊车漆不好维修和修复。</div><div class="qa-a"><blockquote><p>您放心，我们是直营体系，在售后服务上会有高质量的服务标准，能够确保不同车漆颜色的补色一致性，修复费用和标准车漆也是一致的，您可以放心选择。</p></blockquote></div></div>
+    </div>
+    <p style="font-size:13px;background:#fff3cd;padding:8px 12px;border-radius:6px;color:#856404;margin-top:4px"><strong>TIPS：</strong>可以把相关决策人拉入你的阵营里，比如：孩子、女性家庭成员。</p>
+  </div>
+</div>
+
+<!-- 八 速查卡 -->
+<div class="card" id="s8">
+  <div class="card-header h-dark"><span class="num">八</span>口袋速查卡</div>
+  <div class="card-body">
+    <div class="pocket"><h3>万能开场</h3>
+      <div class="kl">XXX您好，我们这边刚好有一台条件非常适合您的车，第一时间联系您，耽误您两分钟可以吗？</div>
+      <div class="kl">我帮您算了一下，想跟您聊个更划算的方案，耽误您两分钟。</div>
+    </div>
+    <div class="pocket"><h3>消除质损顾虑三板斧</h3>
+      <div class="kl">① 原厂背书：是原厂标准处理的，不影响任何权益。</div>
+      <div class="kl">② 政策补偿：额外赠送XX油卡/积分，相当于变相优惠。</div>
+      <div class="kl">③ 稀缺关门：我帮您优先留了，您不要我就给其他人了。</div>
+    </div>
+    <div class="pocket"><h3>转大配核心三句</h3>
+      <div class="kl">小配排产慢，大配现车最快三天提走。</div>
+      <div class="kl">小配二手多折一万，大配保值好出手。</div>
+      <div class="kl">补贴有限额，现在提比等着提更合算。</div>
+    </div>
+    <div class="pocket"><h3>踏板选装核心三句</h3>
+      <div class="kl">只有原厂踏板才能用车机控制，副厂的用不了。</div>
+      <div class="kl">交付后暂不支持后期加装，现在不选就没机会了。</div>
+      <div class="kl">老人孩子孕妇上下车，有踏板安全省力多了。</div>
+    </div>
+    <div class="pocket"><h3>轮毂选装核心三句</h3>
+      <div class="kl">选装基金仅需5000元，升级21寸和旗舰L9是一样的。</div>
+      <div class="kl">后期自己换，轮毂+轮胎费用远高于原厂选装。</div>
+      <div class="kl">21寸静音海绵轮胎，胎噪反而更小，放心开。</div>
+    </div>
+    <div class="pocket"><h3>颜色选装核心三句</h3>
+      <div class="kl">宾利/奔驰同款颜色要4万+，理想5000元选装基金搞定。</div>
+      <div class="kl">原厂漆品质保障，贴膜和改色膜完全不是一个档次。</div>
+      <div class="kl">出厂状态，后期维修补漆颜色一致性有品质保障。</div>
+    </div>
+    <div class="pocket"><h3>引导到店 + 跟进收尾</h3>
+      <div class="kl">光说不如眼见，您有时间来交付中心看看实车，我陪您，来了再做决定。</div>
+      <div class="kl">您今天方便给我个回复吗？这边资源有限，我好帮您安排。</div>
+      <div class="kl">您的小配订单我帮您保留着，大配这边也留到今晚，考虑好告诉我。</div>
+    </div>
+  </div>
+</div>
+
+<!-- 九 注意事项 -->
+<div class="card" id="s9">
+  <div class="card-header h-dark"><span class="num">九</span>注意事项</div>
+  <div class="card-body">
+    <div class="warn-box">
+      <h3>禁用说法 &amp; 行动准则</h3>
+      <ul>
+        <li><span class="forbidden">禁止</span>："这台车有问题" → 改说"有一点小差异/有额外关怀政策"</li>
+        <li><span class="forbidden">禁止</span>："小配不好" → 改说"小配在某些方面有需要提前了解的情况"</li>
+        <li><span class="forbidden">禁止</span>："踏板/轮毂要加钱" → 改说"使用您的选装基金权益"</li>
+        <li>算账要具体，报出实际数字，越具体越有说服力</li>
+        <li>不要给客户压力，给选项、给信息，让客户自己说服自己</li>
+        <li>质损车一定要引导到店实际看，到了店成交率大幅提升</li>
+        <li>选装推荐要结合客户家庭情况做场景化引导，不要干讲功能</li>
+        <li>改配手续由你来跑，降低客户的行动门槛</li>
+        <li>每次沟通结束<strong>必须给截止时间</strong>："这台今晚/明天上午帮您留着，您看能不能给我个消息？"</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
